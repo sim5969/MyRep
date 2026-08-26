@@ -1,0 +1,59 @@
+# Проект НТ53 «Конфигуратор секций АСУ ТП» — стандарт ООО «НТ» v2.0.
+# В Git — код приложения, библиотека модулей, пакет AI/ и CLAUDE.md.
+# Выгрузка EPLAN и фотографии панелей (папка «Модули»), сборочные артефакты и
+# зависимости — на Synology (P:) или локально, вне Git.
+
+# --- Whitelist: игнорировать всё в корне, кроме перечисленного ---
+/*
+!/.gitattributes
+!/.gitignore
+!/CLAUDE.md
+!/README.md
+!/ТЗ.md
+!/index.html
+!/package.json
+!/package-lock.json
+!/tsconfig.json
+!/vite.config.ts
+!/AI/
+!/src/
+!/scripts/
+!/tests/
+!/docs/
+!/.claude/
+
+# .claude — общий конфиг dev-сервера, но не личные настройки
+/.claude/*
+!/.claude/launch.json
+/.claude/settings.local.json
+
+# --- Внутри AI/ не версионировать рабочие бинарные артефакты и служебное ---
+AI/backups/
+AI/reports/*.pdf
+AI/reports/*.xlsx
+AI/reports/*.tsv
+AI/reports/*.png
+AI/scripts/local.config
+AI/scripts/eplan_connection.json
+
+# --- Зависимости и сборочные артефакты (отсечены /*, перечислено для ясности) ---
+node_modules/
+dist/
+*.tsbuildinfo
+*.local
+
+# --- Python (вспомогательные скрипты) ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Мусор ОС / временные файлы ---
+Thumbs.db
+desktop.ini
+Desktop.ini
+.DS_Store
+~$*
+*.tmp
+*.log
+*.bak
