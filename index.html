@@ -843,5 +843,26 @@ document.getElementById('foot').innerHTML=`Компоновщик силовых
 PUMPS=EXAMPLE.map(x=>({...x}));
 renderPumps(); recompute();
 </script>
+<script>
+/* Авто-высота при встраивании через iframe (напр. Tilda): сообщаем родителю реальную
+   высоту документа, чтобы окно подстраивалось без внутренней прокрутки (важно для мобильных). */
+(function(){
+  if (window.self === window.top) return;           // только внутри iframe
+  var last = 0;
+  function post(){
+    var b = document.body, d = document.documentElement;
+    var h = Math.max(d.scrollHeight, b ? b.scrollHeight : 0,
+                     d.offsetHeight, b ? b.offsetHeight : 0);
+    if (h && h !== last){ last = h; parent.postMessage({type:'nt40-config-height', height:h}, '*'); }
+  }
+  window.addEventListener('load', post);
+  window.addEventListener('resize', post);
+  document.addEventListener('click', function(){ setTimeout(post, 80); });
+  document.addEventListener('input', function(){ setTimeout(post, 80); });
+  if (window.ResizeObserver){ try{ new ResizeObserver(post).observe(document.body); }catch(e){} }
+  setInterval(post, 1000);                            // подстраховка на динамику
+  post();
+})();
+</script>
 </body>
 </html>
