@@ -11,7 +11,7 @@
  * Флаги: --pdf, --dxf, --csv (таблица надписей), --xlsx (спецификация), --all.
  * Имена файлов — как в приложении: «<наименование проекта> фасад.pdf» и т. д.
  */
-import { readFileSync, writeFileSync } from 'node:fs'
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { arg, flag, ROOT, withApp } from './app-modules.mjs'
 
@@ -34,6 +34,7 @@ if (!Object.values(want).some(Boolean)) {
 }
 
 const outDir = arg('out', dirname(src))
+mkdirSync(outDir, { recursive: true })
 
 await withApp(async (load) => {
   const { normalizeProject } = await load('/src/lib/project.ts')
