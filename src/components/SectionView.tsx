@@ -97,6 +97,13 @@ export function SectionView({ sec, displayId, showPositions }: Props) {
               strokeDasharray={dashed ? '14 8' : undefined}
               style={{ cursor: dragging ? 'grabbing' : 'grab' }}
               onMouseDown={(e) => {
+                // правая кнопка — перетаскивание модуля для обмена двух модулей местами
+                if (e.button === 2) {
+                  e.preventDefault()
+                  select(here)
+                  beginDrag(here)
+                  return
+                }
                 if (e.button !== 0 || e.ctrlKey) return // Ctrl + левая — панорама полотна
                 e.preventDefault() // не даём браузеру выделять текст при протяжке
                 // обмен, начатый кнопкой «Поменять местами»: второй щелчок завершает
@@ -106,8 +113,8 @@ export function SectionView({ sec, displayId, showPositions }: Props) {
                   return
                 }
                 select(here)
-                beginDrag(here)
               }}
+              onContextMenu={(e) => e.preventDefault()}
               onMouseEnter={() => {
                 if (!dragging || !swapFrom) return
                 setDragOver(canSwap(swapFrom, here) ? here : null)
