@@ -948,7 +948,7 @@ document.getElementById('pbody').addEventListener('click',e=>{
   if(e.target.dataset.rm!=null){ PUMPS.splice(+e.target.dataset.rm,1); if(!PUMPS.length)PUMPS.push({}); renderPumps(); recompute(); }
 });
 document.getElementById('addBtn').onclick=()=>{PUMPS.push({tag:'Н-'+(PUMPS.length+1),qty:1}); renderPumps(); recompute();};
-document.getElementById('clearBtn').onclick=()=>{PUMPS=[{},{},{}]; renderPumps(); recompute();};
+document.getElementById('clearBtn').onclick=()=>{PUMPS=[{}]; renderPumps(); recompute();};
 document.getElementById('exampleBtn').onclick=()=>{PUMPS=EXAMPLE.map(x=>({...x})); renderPumps(); recompute();};
 document.getElementById('csvBtn').onclick=()=>exportCSV();
 document.getElementById('printBtn').onclick=()=>window.print();
