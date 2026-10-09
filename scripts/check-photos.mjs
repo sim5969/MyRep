@@ -27,10 +27,10 @@ if (!existsSync(PHOTOS)) {
 
 const IMG = /\.(jpe?g|png|bmp|webp)$/i
 
-/** Код и наименование из имени файла: «<код> <наименование>.jpg» */
+/** Код и наименование из имени файла: «<код> <наименование>.jpg». Суффикс исполнения — «-А» или «-1» */
 function parseName(file) {
   const base = file.replace(IMG, '')
-  const m = base.match(/^\s*([0-9]{1,2}(?:-[A-ZА-Я])?)\s+(.+?)\s*(\(\d+\))?$/)
+  const m = base.match(/^\s*([0-9]{1,2}(?:-[A-ZА-Я0-9])?)\s+(.+?)\s*(\(\d+\))?$/)
   return m ? { code: m[1].padStart(2, '0'), name: m[2] } : null
 }
 
