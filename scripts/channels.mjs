@@ -255,7 +255,8 @@ export function loadChannelFiles() {
   for (const f of readdirSync(DIR).filter((f) => f.endsWith('.md')).sort()) {
     const code = f.slice(0, -3)
     const parsed = parseChannelFile(readFileSync(join(DIR, f), 'utf8'), f)
-    if (!/^[0-9A-Za-zА-Яа-я]{2,3}$/.test(code)) {
+    // код панели с необязательным суффиксом исполнения: «45», «03-1», «04-1»
+    if (!/^[0-9A-Za-zА-Яа-я]{2,3}(?:-[0-9A-Za-zА-Яа-я])?$/.test(code)) {
       parsed.errors.push(`${f}: имя файла должно быть кодом панели, например «45.md»`)
     }
     out.set(code, { code, file: f, ...parsed })
