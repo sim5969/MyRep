@@ -11,6 +11,7 @@
     "gen:library": "node scripts/gen-library.mjs",
     "gen:frame": "node scripts/gen-frame.mjs",
     "gen:library-table": "node scripts/library-table.mjs",
+    "gen:xlsx": "node scripts/gen-xlsx.mjs",
     "channels": "node scripts/channels.mjs",
     "plan": "node scripts/plan.mjs",
     "export": "node scripts/export.mjs",
@@ -26,6 +27,7 @@
     "zustand": "^4.5.5"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",

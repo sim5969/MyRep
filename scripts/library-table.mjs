@@ -10,6 +10,7 @@
 import { writeFileSync } from 'node:fs'
 import { arg, withApp } from './app-modules.mjs'
 import { ALIASES, KINDS, SLOT1, SLOTS_PER_SECTION } from './kinds.mjs'
+import { channelGroups, labelGroups } from './library-rows.mjs'
 
 const out = arg('out')
 
@@ -56,16 +57,8 @@ const md = await withApp(async (load) => {
   lines.push('| Модуль | Шильды | Строк | Предел строк, симв. |')
   lines.push('|---|---|---|---|')
   for (const m of MODULES) {
-    const ed = m.labels.filter((l) => l.editable)
-    if (!ed.length) continue
-    const groups = new Map()
-    for (const l of ed) {
-      const key = `${l.lines}|${l.maxChars.join('/')}`
-      if (!groups.has(key)) groups.set(key, { ids: [], l })
-      groups.get(key).ids.push(l.id)
-    }
-    for (const g of groups.values()) {
-      lines.push(`| \`${m.code}\` | ${g.ids.join(', ')} | ${g.l.lines} | ${g.l.maxChars.join(' / ')} |`)
+    for (const g of labelGroups(m)) {
+      lines.push(`| \`${m.code}\` | ${g.ids.join(', ')} | ${g.lines} | ${g.maxChars.join(' / ')} |`)
     }
   }
   lines.push('')
@@ -82,24 +75,10 @@ const md = await withApp(async (load) => {
     lines.push('| Модуль | Каналы | Устройство | Объекты | На фасаде | Сигналы на канал | Взрывозащита | Барьер |')
     lines.push('|---|---|---|---|---|---|---|---|')
     for (const m of withCh) {
-      const groups = new Map()
-      for (const c of m.channels) {
-        const sig = Object.entries(c.signals ?? {})
-          .map(([t, n]) => `${n} ${t}`)
-          .join(', ')
-        const key = [c.kind, sig, c.ex ?? '', c.facade === false ? 'нет' : 'да', c.barrier?.name ?? ''].join('|')
-        if (!groups.has(key)) groups.set(key, { ids: [], objects: [], c, sig })
-        groups.get(key).ids.push(c.id)
-        // объекты в группе могут повторяться: у станции и её манометра он общий
-        if (c.object !== undefined && !groups.get(key).objects.includes(c.object)) {
-          groups.get(key).objects.push(c.object)
-        }
-      }
-      for (const g of groups.values()) {
-        const c = g.c
+      for (const g of channelGroups(m)) {
         lines.push(
-          `| \`${m.code}\` | ${g.ids.join(', ')} | ${c.kind} | ${g.objects.join(', ') || '—'} | ` +
-            `${c.facade === false ? 'нет' : 'да'} | ${g.sig || '—'} | ${c.ex ?? '—'} | ${c.barrier?.name ?? '—'} |`,
+          `| \`${m.code}\` | ${g.ids.join(', ')} | ${g.kind} | ${g.objects.join(', ') || '—'} | ` +
+            `${g.facade ? 'да' : 'нет'} | ${g.signals || '—'} | ${g.ex ?? '—'} | ${g.barrier ?? '—'} |`,
         )
       }
     }
