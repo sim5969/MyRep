@@ -103,6 +103,9 @@ function migrate(p: Project & LegacyProject): Project {
   return p
 }
 
+/** Прежние коды исполнений панелей (до перехода на трёхзначные 3xx) */
+const LEGACY_CODES: Record<string, string> = { '03-1': '303', '04-1': '304', '05-1': '305', '45-1': '345' }
+
 /** Приведение загруженного проекта к текущей схеме */
 export function normalizeProject(raw: unknown): Project {
   const p = raw as Project & LegacyProject
@@ -123,7 +126,8 @@ export function normalizeProject(raw: unknown): Project {
       for (let n = 1; n <= SLOT_COUNT; n++) {
         const found = sec.slots?.find((s) => s.n === n)
         const fallback = n === 1 ? SLOT1_CODE : BLANK_CODE
-        const code = n === 1 ? SLOT1_CODE : found?.moduleCode || fallback
+        const saved = found?.moduleCode ? (LEGACY_CODES[found.moduleCode] ?? found.moduleCode) : ''
+        const code = n === 1 ? SLOT1_CODE : saved || fallback
         // модуль должен существовать в библиотеке и быть допустимым для этого слота
         const known = isAllowed(code, n) ? code : fallback
         slots.push({ n, moduleCode: known, labels: { ...defaultLabels(known), ...(found?.labels ?? {}) } })
