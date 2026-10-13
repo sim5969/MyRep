@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b --force && vite build",
+    "deploy": "node scripts/deploy.mjs",
     "preview": "vite preview",
     "gen:library": "node scripts/gen-library.mjs",
     "gen:frame": "node scripts/gen-frame.mjs",

@@ -13,7 +13,12 @@
   Код: `src/lib/file-dialogs.ts` (новый), `src/store.ts` (`file`, `markSaved`), `Toolbar.tsx`,
   `App.tsx`, `src/lib/project.ts` (`nameAfterFile`). Решения — `DECISIONS.md`, раздел «Приложение».
 - Проверено: `npm run check`, `npm run build`, сценарии открытия/сохранения/отмены/перезагрузки
-  в браузере. Изменения **не закоммичены** — коммит и `push` за автором.
+  в браузере. Закоммичено и отправлено в Gitea (`f93ada8`).
+- **Выкладка сборки на Synology.** `vite.config.ts`: `base: './'` — dist работает из любой папки.
+  Новый `scripts/deploy.mjs` (`npm run deploy`): копирует `dist/` в `<NT_ASUTP_DATA>/dist`
+  (`P:\Projects\Шкафы АСУТП НТ53\dist`) и кладёт рядом `scripts/Запуск конфигуратора.bat`
+  (локальный сервер Python на 8653 + браузер). Выложено 2026-10-13; проверено с localhost:8653.
+  Эти правки (vite.config, deploy, bat, README) — **не закоммичены**.
 
 ### На что обратить внимание
 
