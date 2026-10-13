@@ -58,6 +58,16 @@ body {
   border-radius: 4px;
 }
 
+/* имя открытого файла проекта рядом с наименованием */
+.toolbar .file {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .toolbar .group {
   display: flex;
   align-items: center;

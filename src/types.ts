@@ -211,3 +211,13 @@ export interface Project {
   project: ProjectMeta
   complexes: Complex[]
 }
+
+/** Файл, из которого открыт или в который сохранён проект. В сам JSON не входит */
+export interface ProjectFile {
+  name: string
+  /**
+   * Дескриптор File System Access API — по нему диалог сохранения открывается в той же папке.
+   * null — файл пришёл через `<input type="file">` или проект ещё не сохранялся.
+   */
+  handle: FileSystemFileHandle | null
+}

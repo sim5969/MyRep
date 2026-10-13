@@ -6,8 +6,10 @@ import { loadPdfAssets } from '../export/pdf/assets'
 import { collectLabels, labelsToCsv } from '../export/labels'
 import { exportSpecXlsx } from '../export/spec'
 import { sectionId } from '../lib/designation'
+import { hasFileDialogs, pickOpenFile, pickSaveFile, writeTextFile } from '../lib/file-dialogs'
+import { nameAfterFile } from '../lib/project'
 import { PX_PER_MM, useStore } from '../store'
-import type { Project } from '../types'
+import type { Project, ProjectFile } from '../types'
 
 interface Props {
   showPositions: boolean
@@ -18,6 +20,7 @@ export function Toolbar({ showPositions, setShowPositions }: Props) {
   const fileRef = useRef<HTMLInputElement>(null)
   const [busy, setBusy] = useState(false)
   const project = useStore((s) => s.project)
+  const file = useStore((s) => s.file)
   const sel = useStore((s) => s.sel)
   const mode = useStore((s) => s.mode)
   const scale = useStore((s) => s.scale)
@@ -33,6 +36,7 @@ export function Toolbar({ showPositions, setShowPositions }: Props) {
   const armSwap = useStore((s) => s.armSwap)
   const setProjectMeta = useStore((s) => s.setProjectMeta)
   const loadProject = useStore((s) => s.loadProject)
+  const markSaved = useStore((s) => s.markSaved)
   const resetProject = useStore((s) => s.resetProject)
   const undo = useStore((s) => s.undo)
   const redo = useStore((s) => s.redo)
@@ -41,14 +45,32 @@ export function Toolbar({ showPositions, setShowPositions }: Props) {
 
   const hasSel = sel !== null
 
-  function save() {
-    const blob = new Blob([JSON.stringify(project, null, 2)], { type: 'application/json' })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = `${project.project.name || 'проект'}.json`
-    a.click()
-    URL.revokeObjectURL(url)
+  /** Текст файла проекта; наименование согласовано с именем файла, под которым он сохраняется */
+  function projectJson(fileName: string): string {
+    const name = nameAfterFile(project.project.name, fileName)
+    return JSON.stringify({ ...project, project: { ...project.project, name } }, null, 2)
+  }
+
+  /**
+   * Сохранить — всегда через окно «Сохранить как»: пользователь выбирает папку и имя.
+   * Диалог открывается в папке текущего файла и предлагает его имя. Без File System Access API
+   * (Firefox) файл уходит обычной загрузкой браузера.
+   */
+  async function save() {
+    const suggested = file?.name ?? `${safeName(project.project.name)}.json`
+    try {
+      if (!hasFileDialogs()) {
+        download(suggested, projectJson(suggested), 'application/json')
+        markSaved({ name: suggested, handle: null })
+        return
+      }
+      const handle = await pickSaveFile(suggested, file?.handle ?? null)
+      if (!handle) return // отменено
+      await writeTextFile(handle, projectJson(handle.name))
+      markSaved({ name: handle.name, handle })
+    } catch (e) {
+      alert(`Не удалось сохранить файл: ${(e as Error).message}`)
+    }
   }
 
   /** Секции, попадающие в выгрузку: в режиме «Секция» — только выбранная */
@@ -101,9 +123,23 @@ export function Toolbar({ showPositions, setShowPositions }: Props) {
     await exportSpecXlsx(project, complex, secs, `${safeName(project.project.name)} спецификация.xlsx`)
   }
 
-  async function open(file: File) {
+  async function open(f: File, source: ProjectFile) {
     try {
-      loadProject(JSON.parse(await file.text()))
+      loadProject(JSON.parse(await f.text()), source)
+    } catch (e) {
+      alert(`Не удалось открыть файл: ${(e as Error).message}`)
+    }
+  }
+
+  /** Открыть — системный диалог; где его нет, скрытый <input type="file"> */
+  async function openDialog() {
+    if (!hasFileDialogs()) {
+      fileRef.current?.click()
+      return
+    }
+    try {
+      const handle = await pickOpenFile(file?.handle ?? null)
+      if (handle) await open(await handle.getFile(), { name: handle.name, handle })
     } catch (e) {
       alert(`Не удалось открыть файл: ${(e as Error).message}`)
     }
@@ -119,8 +155,14 @@ export function Toolbar({ showPositions, setShowPositions }: Props) {
         className="project-name"
         value={project.project.name}
         onChange={(e) => setProjectMeta({ name: e.target.value })}
-        title="Наименование проекта"
+        title="Наименование проекта — графа штампа «Наименование объекта». Пока не задано, берётся из имени файла"
       />
+      <span
+        className="file mono"
+        title={file ? `Файл проекта: ${file.name}` : 'Проект ещё не сохранён в файл — нажмите «Сохранить»'}
+      >
+        {file ? file.name : 'файл не сохранён'}
+      </span>
 
       <div className="group">
         <button onClick={addSection}>+ Секция</button>
@@ -217,8 +259,12 @@ export function Toolbar({ showPositions, setShowPositions }: Props) {
       </div>
 
       <div className="group right">
-        <button onClick={() => fileRef.current?.click()}>Открыть</button>
-        <button onClick={save}>Сохранить</button>
+        <button onClick={openDialog} title="Открыть файл проекта (.json)">
+          Открыть
+        </button>
+        <button onClick={save} title="Сохранить проект в файл: откроется окно выбора папки и имени">
+          Сохранить
+        </button>
         <button
           onClick={() => {
             if (confirm('Создать новый проект? Текущий будет потерян, если он не сохранён.')) resetProject()
@@ -233,7 +279,7 @@ export function Toolbar({ showPositions, setShowPositions }: Props) {
           hidden
           onChange={(e) => {
             const f = e.target.files?.[0]
-            if (f) void open(f)
+            if (f) void open(f, { name: f.name, handle: null })
             e.target.value = ''
           }}
         />

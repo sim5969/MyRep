@@ -39,8 +39,26 @@ export function makeComplex(id: string, sections = 1): Complex {
 /** Обозначение комплекса по умолчанию */
 export const DEFAULT_COMPLEX_ID = 'КСУ1'
 
+/** Наименование проекта, пока проектировщик не дал своего */
+export const DEFAULT_PROJECT_NAME = 'Новый проект'
+
+/** Имя файла без расширения */
+export function fileBaseName(fileName: string): string {
+  return fileName.replace(/\.json$/i, '')
+}
+
+/**
+ * Наименование проекта после открытия или сохранения файла. Пока проекту не дали имени
+ * (стоит «Новый проект»), им становится имя файла — так в строке конфигуратора виден открытый
+ * файл. Явно заданное наименование (оно же графа штампа «Наименование объекта») не трогаем.
+ */
+export function nameAfterFile(current: string, fileName: string): string {
+  const name = current.trim()
+  return name && name !== DEFAULT_PROJECT_NAME ? current : fileBaseName(fileName)
+}
+
 /** Сведения проекта, они же графы основной надписи чертежа */
-export function defaultMeta(name = 'Новый проект'): ProjectMeta {
+export function defaultMeta(name = DEFAULT_PROJECT_NAME): ProjectMeta {
   return {
     name,
     code: DEV_PREFIX,
@@ -56,7 +74,7 @@ export function defaultMeta(name = 'Новый проект'): ProjectMeta {
   }
 }
 
-export function makeProject(name = 'Новый проект', sections = 3): Project {
+export function makeProject(name = DEFAULT_PROJECT_NAME, sections = 3): Project {
   return {
     version: 2,
     project: defaultMeta(name),

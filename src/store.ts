@@ -1,9 +1,19 @@
 import { create } from 'zustand'
-import type { Project, Section } from './types'
-import { cloneSection, isAllowed, makeProject, makeSection, makeSlot, normalizeProject } from './lib/project'
+import type { Project, ProjectFile, Section } from './types'
+import {
+  cloneSection,
+  isAllowed,
+  makeProject,
+  makeSection,
+  makeSlot,
+  nameAfterFile,
+  normalizeProject,
+} from './lib/project'
 import { SLOT1_CODE } from './geometry'
 
 const STORAGE_KEY = 'asutp-configurator-project'
+/** Имя файла, с которым работали в прошлый раз; дескриптор файла в хранилище не переживает перезагрузку */
+const FILE_KEY = 'asutp-configurator-file'
 
 /**
  * Масштаб хранится в пикселях на миллиметр.
@@ -23,6 +33,8 @@ export interface Selection {
 
 interface State {
   project: Project
+  /** Файл проекта на диске; null — проект ещё не сохранялся и не открывался из файла */
+  file: ProjectFile | null
   sel: Selection | null
   mode: ViewMode
   scale: number
@@ -66,7 +78,10 @@ interface State {
   removeSection: (secUid: string) => void
   moveSection: (secUid: string, dir: -1 | 1) => void
 
-  loadProject: (raw: unknown) => void
+  /** Открыть проект из разобранного JSON; file — откуда он взят */
+  loadProject: (raw: unknown, file?: ProjectFile | null) => void
+  /** Проект записан в файл: запомнить его и при необходимости взять имя файла в наименование */
+  markSaved: (file: ProjectFile) => void
   resetProject: () => void
   undo: () => void
   redo: () => void
@@ -84,19 +99,31 @@ function persist(p: Project) {
   }
 }
 
-function restore(): Project {
+function persistFile(f: ProjectFile | null) {
+  try {
+    if (f) localStorage.setItem(FILE_KEY, f.name)
+    else localStorage.removeItem(FILE_KEY)
+  } catch {
+    /* хранилище недоступно — не критично */
+  }
+}
+
+function restore(): { project: Project; file: ProjectFile | null } {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (raw) {
       const p = normalizeProject(JSON.parse(raw))
       persist(p) // сохраняем уже приведённое состояние
-      return p
+      const name = localStorage.getItem(FILE_KEY)
+      return { project: p, file: name ? { name, handle: null } : null }
     }
   } catch {
     /* повреждённое хранилище игнорируем */
   }
-  return makeProject()
+  return { project: makeProject(), file: null }
 }
+
+const restored = restore()
 
 /** Найти секцию по uid */
 function findSection(p: Project, uid: string): Section | undefined {
@@ -118,7 +145,8 @@ export const useStore = create<State>((set, get) => {
   }
 
   return {
-    project: restore(),
+    project: restored.project,
+    file: restored.file,
     sel: null,
     mode: 'complex',
     scale: 0.28,
@@ -239,16 +267,31 @@ export const useStore = create<State>((set, get) => {
         }
       }),
 
-    loadProject: (raw) => {
+    loadProject: (raw, file = null) => {
       const p = normalizeProject(raw)
+      if (file) p.project.name = nameAfterFile(p.project.name, file.name)
       persist(p)
-      set({ project: p, sel: null, swapFrom: null, dragging: false, dragOver: null, past: [], future: [] })
+      persistFile(file)
+      set({ project: p, file, sel: null, swapFrom: null, dragging: false, dragOver: null, past: [], future: [] })
+    },
+
+    markSaved: (file) => {
+      const { project } = get()
+      const name = nameAfterFile(project.project.name, file.name)
+      if (name !== project.project.name) {
+        commit((p) => {
+          p.project.name = name
+        })
+      }
+      persistFile(file)
+      set({ file })
     },
 
     resetProject: () => {
       const p = makeProject()
       persist(p)
-      set({ project: p, sel: null, swapFrom: null, dragging: false, dragOver: null, past: [], future: [] })
+      persistFile(null)
+      set({ project: p, file: null, sel: null, swapFrom: null, dragging: false, dragOver: null, past: [], future: [] })
     },
 
     undo: () => {

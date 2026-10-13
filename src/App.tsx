@@ -9,7 +9,13 @@ import { PX_PER_MM, useStore } from './store'
 export default function App() {
   const [showPositions, setShowPositions] = useState(false)
   const project = useStore((s) => s.project)
+  const fileName = useStore((s) => s.file?.name)
   const complex = project.complexes[0]
+
+  // имя открытого файла — в заголовке вкладки
+  useEffect(() => {
+    document.title = fileName ? `${fileName} — Конфигуратор секций АСУ ТП НТ53` : 'Конфигуратор секций АСУ ТП — НТ53'
+  }, [fileName])
 
   // горячие клавиши масштаба; не мешаем вводу текста
   useEffect(() => {
