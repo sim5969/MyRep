@@ -6,7 +6,7 @@ import type { ModuleSpec } from '../types'
  */
 const files = import.meta.glob<ModuleSpec>('./*.json', { eager: true, import: 'default' })
 
-// порядок каталога — числовой: базовые панели 00…65, затем исполнения 303…345
+// порядок каталога — числовой: базовые панели 00…65, затем исполнения 104…345
 export const MODULES: ModuleSpec[] = Object.values(files).sort(
   (a, b) => Number(a.code) - Number(b.code) || a.code.localeCompare(b.code),
 )

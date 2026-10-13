@@ -103,8 +103,8 @@ function migrate(p: Project & LegacyProject): Project {
   return p
 }
 
-/** Прежние коды исполнений панелей (до перехода на трёхзначные 3xx) */
-const LEGACY_CODES: Record<string, string> = { '03-1': '303', '04-1': '304', '05-1': '305', '45-1': '345' }
+/** Прежние коды исполнений панелей (до перехода на трёхзначные: 04-1 → 104, остальные 3xx) */
+const LEGACY_CODES: Record<string, string> = { '03-1': '303', '04-1': '104', '05-1': '305', '45-1': '345' }
 
 /** Приведение загруженного проекта к текущей схеме */
 export function normalizeProject(raw: unknown): Project {
