@@ -1,12 +1,14 @@
 /**
  * Справочная книга «Модули НТ53.xlsx» — сводка библиотеки для тех, кто не
  * открывает конфигуратор и JSON: модули с видом фасада, правило подбора,
- * надписи, каналы подключения, панель слота 1 и перечень плагинов Claude Code.
+ * надписи, каналы подключения, панель слота 1, групповые спецификации панелей
+ * из EPLAN (листы «МУ-NN») и перечень плагинов Claude Code.
  *
  * Источник истины — библиотека `src/library/*.json`, правило подбора
- * `scripts/kinds.mjs` и маркетплейс `nt-tools`; книга собирается заново целиком,
- * руками в ней ничего не правится. Фасады рисует тот же компонент ModuleView,
- * что и каталог приложения (SVG → PNG через resvg).
+ * `scripts/kinds.mjs`, выгрузка EPLAN в «Модули» (листы «СО» в DXF) и маркетплейс
+ * `nt-tools`; книга собирается заново целиком, руками в ней ничего не правится.
+ * Фасады рисует тот же компонент ModuleView, что и каталог приложения
+ * (SVG → PNG через resvg).
  *
  * Запуск:
  *   npm run gen:xlsx                      → <DATA_ROOT>/Модули НТ53.xlsx
@@ -14,19 +16,28 @@
  *
  * Перед запуском закрыть книгу в Excel: открытый файл на P: не перезаписывается.
  */
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs'
 import { basename, join } from 'node:path'
 import { createElement } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import { Resvg } from '@resvg/resvg-js'
 import ExcelJS from 'exceljs'
 import { arg, withApp } from './app-modules.mjs'
-import { DATA_ROOT } from './data-root.mjs'
+import { DATA_ROOT, MODULES_DIR } from './data-root.mjs'
 import { ALIASES, KINDS, SLOT1 } from './kinds.mjs'
 import { channelGroups, labelGroups } from './library-rows.mjs'
+import { parseSpec, specFiles } from './rd-spec.mjs'
 
 const out = arg('out', join(DATA_ROOT, 'Модули НТ53.xlsx'))
 const pluginsDir = arg('plugins', 'P:\\Projects\\_Tools\\claude-plugins')
+
+/**
+ * Листы «МУ-NN» — групповая спецификация изделий панели по месту установки +NN
+ * из выгрузки EPLAN (листы «СО» в DXF, разбор — rd-spec.mjs). Папка выгрузки —
+ * первая в «Модули» с деревом ==КД/=ОП/.SEC1; места установки перечислены явно:
+ * лист появляется, когда его спецификация выгружена и проверена.
+ */
+const SPEC_LOCATIONS = ['01']
 
 /**
  * Описание модуля для листа «Модули» — прозой, для чтения. В библиотеке такого
@@ -143,6 +154,21 @@ function pluginRows(dir) {
     return [p.name, p.version, p.description, parts.join('\n'), (p.keywords ?? []).join(', '), `claude plugin install ${p.name}@${mp.name}`]
   })
   return { name: mp.name, rows }
+}
+
+/** Папка выгрузки EPLAN: первая подпапка «Модули» с деревом ==КД (рабочая документация) */
+function eplanExportDir(dir = MODULES_DIR) {
+  if (!existsSync(dir)) return null
+  for (const d of readdirSync(dir, { withFileTypes: true })) {
+    if (d.isDirectory() && existsSync(join(dir, d.name, '==КД'))) return join(dir, d.name)
+  }
+  return null
+}
+
+/** Дата самого свежего из файлов, дд.мм.гггг */
+function dateOf(files) {
+  const t = Math.max(...files.map((f) => statSync(f).mtimeMs))
+  return new Date(t).toLocaleDateString('ru-RU')
 }
 
 await withApp(async (load) => {
@@ -322,6 +348,41 @@ await withApp(async (load) => {
     },
   )
 
+  // --- МУ-NN: групповая спецификация панели из EPLAN ------------------------
+  const exportDir = eplanExportDir()
+  let specSheets = 0
+  for (const loc of SPEC_LOCATIONS) {
+    const files = exportDir ? specFiles(exportDir, loc) : []
+    if (!files.length) {
+      console.warn(`  ! лист «МУ-${loc}» пропущен: нет листов «СО» для +${loc} в ${exportDir ?? MODULES_DIR}`)
+      continue
+    }
+    const rows = parseSpec(files)
+    const ws = sheet(
+      wb,
+      `МУ-${loc}`,
+      [
+        { header: '№', width: 5, style: KEY },
+        { header: 'Артикул', width: 24 },
+        { header: 'Наименование', width: 58 },
+        { header: 'Ед.', width: 6, style: CENTER },
+        { header: 'Кол.', width: 8, style: CENTER },
+        { header: 'Обозначения (ОУ)', width: 24 },
+      ],
+      rows.map((r) => [r.n, r.article, r.name, r.unit, r.qty, r.note]),
+      {
+        note:
+          `Групповая спецификация изделий панели по месту установки +${loc} из проекта EPLAN «${basename(exportDir)}»: ` +
+          `листы ${files.map((f) => basename(f, '.dxf')).join(', ')}, выгрузка от ${dateOf(files)}. ` +
+          `Источник — ${join(exportDir, '==КД', '=ОП', '.SEC1', `+${loc}`, 'Групповая спецификация изделий')}; ` +
+          'обновление: в EPLAN «Отчёты → Обновить», экспорт листов «СО» этого места установки в DXF в ту же папку, затем npm run gen:xlsx. ' +
+          'Артикул — номер заказа изделия, «Обозначения» — ОУ изделий, как в отчёте EPLAN.',
+      },
+    )
+    ws.getColumn(5).numFmt = '0.###'
+    specSheets++
+  }
+
   // --- Плагины --------------------------------------------------------------
   const plugins = pluginRows(pluginsDir)
   if (plugins) {
@@ -360,6 +421,6 @@ await withApp(async (load) => {
   }
   console.log(
     `Справочник: ${out} (${(bytes.byteLength / 1024).toFixed(0)} КБ) — модулей ${MODULES.length}, типов ${Object.keys(KINDS).length}, ` +
-      `надписей ${labelRows.length} строк, каналов ${chRows.length} строк, плагинов ${plugins ? plugins.rows.length : 0}`,
+      `надписей ${labelRows.length} строк, каналов ${chRows.length} строк, спецификаций МУ ${specSheets}, плагинов ${plugins ? plugins.rows.length : 0}`,
   )
 })
