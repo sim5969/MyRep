@@ -28,6 +28,22 @@
   корректно пропускает сверку (exit 0), если папка `Модули` недоступна. `rd-facade`/`rd-spec`
   берут путь к DXF из аргумента — их не трогали.
 
+- **2026-10-14. Зеркало репозитория на GitHub — для облачных сессий Claude Code.** Из облака
+  (claude.ai/code) хост `nt1` недоступен, поэтому репозиторий добавлен подпапкой `asutp-nt53/`
+  в `github.com/sim5969/MyRep` (`git subtree add --prefix=asutp-nt53
+  http://nt1:3000/NT/asutp-nt53.git master`, история коммитов сохранена). **Основной
+  репозиторий — Gitea `NT/asutp-nt53`**, GitHub — производная копия; решение от 2026-08-26
+  о Gitea в силе. Синхронизация — с ПК участника, из клона MyRep:
+  Gitea → GitHub: `git subtree pull --prefix=asutp-nt53 http://nt1:3000/NT/asutp-nt53.git master`;
+  GitHub → Gitea: `git subtree push --prefix=asutp-nt53 http://nt1:3000/NT/asutp-nt53.git master`.
+  Облачные сессии пишут в ветки MyRep; перед переносом в Gitea прогонять `npm run check`.
+  Видимость зеркала — приватная, как у исходного репозитория (в нём реквизиты ООО «НТ» и
+  замечания по проектам заказчиков).
+- **2026-10-14. Облачная сессия работает без `P:`.** Из облака выполнимы только команды, которым
+  достаточно клона: `check`, `build`, `gen:library`, `plan`, `export`, `check:pdf`, `check:dxf`.
+  Команды, читающие Synology (`deploy`, `gen:xlsx` по DXF, `gen:frame`, `rd-facade`/`rd-spec`,
+  `gen:library-table` в плагин), — только с ПК участника.
+
 ## Библиотека модулей
 
 - **2026-08-26. Модуль 48 — «ИВК „Зодиак", 2 шт.»** добавлен по дополнительной выгрузке EPLAN

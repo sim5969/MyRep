@@ -10,6 +10,11 @@
   `Move-Item` к свежесозданным папкам на `P:` не применять.
 - Путь к бинарникам на Synology скрипты берут из переменной `NT_ASUTP_DATA`
   (по умолчанию `P:\Projects\Шкафы АСУТП НТ53`) или файла `AI/scripts/local.config` (в `.gitignore`).
+- **Облачная сессия Claude Code** (claude.ai/code) работает с зеркалом на GitHub
+  (`sim5969/MyRep`, подпапка `asutp-nt53/`) без `nt1` и диска `P:`: доступны только команды,
+  которым достаточно клона (`check`, `build`, `gen:library`, `plan`, `export`, `check:pdf`,
+  `check:dxf`); `deploy`, `gen:xlsx`, `gen:frame`, разбор DXF и справочник навыка — с ПК.
+  Основной репозиторий — Gitea; порядок синхронизации — `DECISIONS.md`, запись 2026-10-14.
 - Node.js — для приложения и скриптов (`npm`, `node`). Если политика PowerShell блокирует `npm.ps1`,
   использовать `npm.cmd` либо `node scripts/…` напрямую (см. корневой `README.md`).
 - Контекст проекта хранится в папке `AI/` и в корневом `README.md`, версионируется в Git
