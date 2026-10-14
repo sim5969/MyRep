@@ -10,19 +10,14 @@ import { fileURLToPath } from 'node:url'
 import { MODULES_DIR } from './data-root.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
-// Папка фотографий и выгрузки EPLAN лежит на Synology, вне Git (AI/AI_COLLAB.md).
-// Путь берётся из NT_ASUTP_DATA / AI/scripts/local.config (см. scripts/data-root.mjs).
+// Папка фотографий «Модули» — в репозитории (см. scripts/data-root.mjs).
 const PHOTOS = MODULES_DIR
 const LIB = join(ROOT, 'src', 'library')
 
 if (!existsSync(PHOTOS)) {
-  console.log(`Папка фотографий не найдена: ${PHOTOS}`)
-  console.log(
-    'Она на Synology (P:), в Git не ведётся. Задайте путь к бинарникам проекта в переменной\n' +
-      'NT_ASUTP_DATA или в AI/scripts/local.config (см. scripts/data-root.mjs) — тогда сверка\n' +
-      'библиотеки с фотографиями заработает. Проверка пропущена.',
-  )
-  process.exit(0)
+  console.error(`Папка фотографий не найдена: ${PHOTOS}`)
+  console.error('Папка «Модули» ведётся в Git — проверьте целостность клона (git status).')
+  process.exit(1)
 }
 
 const IMG = /\.(jpe?g|png|bmp|webp)$/i

@@ -1,7 +1,7 @@
 /**
- * Корень бинарников проекта на Synology: выгрузка EPLAN и фотографии панелей
- * (папка «Модули»). В Git эти файлы не ведутся — модель хранилищ описана в
- * AI/AI_COLLAB.md.
+ * Корень бинарников проекта на Synology (DATA_ROOT): сборка dist/, книга «Модули НТ53.xlsx».
+ * Фотографии панелей (папка «Модули») с 14.10.2026 ведутся в Git и берутся из корня
+ * репозитория (MODULES_DIR). Модель хранилищ описана в AI/AI_COLLAB.md.
  *
  * Приоритет источника пути:
  *   1) переменная окружения NT_ASUTP_DATA;
@@ -27,5 +27,6 @@ function fromLocalConfig() {
 
 export const DATA_ROOT = process.env.NT_ASUTP_DATA || fromLocalConfig() || ROOT
 
-/** Папка выгрузки EPLAN и фотографий панелей */
-export const MODULES_DIR = join(DATA_ROOT, 'Модули')
+/** Папка фотографий панелей — в репозитории. Выгрузка EPLAN (DXF) кладётся в неё же
+ *  подпапкой «Макросы …», но в Git не ведётся (см. .gitignore). */
+export const MODULES_DIR = join(ROOT, 'Модули')
