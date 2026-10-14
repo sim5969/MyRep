@@ -5,6 +5,10 @@
  *   задание.json  — задание на компоновку;
  *   эталон.json   — проект, который должен получиться (необязательно).
  *
+ * Наборы с данными объектов заказчиков в Git не хранятся: их кладут в
+ * `<NT_ASUTP_DATA>/tests/plan/<случай>/` (корень бинарников, `data-root.mjs`) —
+ * проверка подхватывает эту папку, если она есть и отличается от корня репозитория.
+ *
  * Если эталона нет, проверяется только то, что задание разбирается без
  * замечаний, а компоновка собирается. Эталон сверяется построчно: код модуля в
  * каждом слоте и каждая надпись эталона. Так правки в `kinds.mjs`, библиотеке
@@ -18,17 +22,23 @@
 import { execFileSync } from 'node:child_process'
 import { mkdtempSync, readdirSync, readFileSync, rmSync, existsSync } from 'node:fs'
 import { tmpdir } from 'node:os'
-import { join } from 'node:path'
+import { join, resolve } from 'node:path'
 import { arg, ROOT, withApp } from './app-modules.mjs'
+import { DATA_ROOT } from './data-root.mjs'
 
 const only = arg('случай')
-const CASES = join(ROOT, 'tests', 'plan')
-const dirs = readdirSync(CASES, { withFileTypes: true })
-  .filter((d) => d.isDirectory() && (!only || d.name === only))
-  .map((d) => d.name)
+/** Папки с наборами: в репозитории и, если задана, вне Git (данные заказчиков) */
+const ROOTS = [join(ROOT, 'tests', 'plan')]
+const external = join(DATA_ROOT, 'tests', 'plan')
+if (resolve(DATA_ROOT) !== resolve(ROOT) && existsSync(external)) ROOTS.push(external)
+const cases = ROOTS.flatMap((base) =>
+  readdirSync(base, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && (!only || d.name === only))
+    .map((d) => ({ name: d.name, dir: join(base, d.name) })),
+)
 
-if (!dirs.length) {
-  console.error(`Наборы не найдены в ${CASES}`)
+if (!cases.length) {
+  console.error(`Наборы не найдены в ${ROOTS.join(', ')}`)
   process.exit(2)
 }
 
@@ -48,8 +58,7 @@ const defaults = await withApp(async (load) => {
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b)
 const SPARE = [['Резерв', '—'], ['Резерв'], ['—']]
 
-for (const name of dirs) {
-  const dir = join(CASES, name)
+for (const { name, dir } of cases) {
   const task = join(dir, 'задание.json')
   if (!existsSync(task)) {
     problems.push(`${name}: нет файла задание.json`)
