@@ -1,0 +1,918 @@
+{
+  "code": "303",
+  "name": "Электрозадвижки регулирующие, 3 шт.",
+  "slotHeight": 250,
+  "allowedSlots": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "price": null,
+  "devices": [
+    {
+      "id": "1",
+      "type": "indicator",
+      "x": 42,
+      "y": 44,
+      "w": 96,
+      "h": 48,
+      "name": "ОВЕН ТРМ1-Щ2.У.И",
+      "article": "ТРМ1-Щ2.У.И",
+      "ref": "1HG1",
+      "cutout": {
+        "w": 92,
+        "h": 45
+      }
+    },
+    {
+      "id": "2",
+      "type": "lamp",
+      "x": 32.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, красная",
+      "article": "AD-16DS-R-DC",
+      "ref": "1VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "3",
+      "type": "lamp",
+      "x": 64.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, зелёная",
+      "article": "AD-16DS-G-DC",
+      "ref": "1VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "4",
+      "type": "lamp",
+      "x": 96.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, зелёная",
+      "article": "AD-16DS-G-DC",
+      "ref": "1VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "5",
+      "type": "lamp",
+      "x": 128.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, красная",
+      "article": "AD-16DS-R-DC",
+      "ref": "1VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "6",
+      "type": "switch",
+      "x": 43.75,
+      "y": 173.75,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель Schneider XB5AD33, 3 полож. с фиксацией",
+      "article": "XB5AD33",
+      "ref": "1SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "7",
+      "type": "switch",
+      "x": 107.75,
+      "y": 173.75,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель Schneider XB5AD53, 3 полож. возвратный",
+      "article": "XB5AD53",
+      "ref": "1SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "8",
+      "type": "indicator",
+      "x": 222,
+      "y": 44,
+      "w": 96,
+      "h": 48,
+      "name": "ОВЕН ТРМ1-Щ2.У.И",
+      "article": "ТРМ1-Щ2.У.И",
+      "ref": "2HG1",
+      "cutout": {
+        "w": 92,
+        "h": 45
+      }
+    },
+    {
+      "id": "9",
+      "type": "lamp",
+      "x": 212.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, красная",
+      "article": "AD-16DS-R-DC",
+      "ref": "2VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "10",
+      "type": "lamp",
+      "x": 244.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, зелёная",
+      "article": "AD-16DS-G-DC",
+      "ref": "2VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "11",
+      "type": "lamp",
+      "x": 276.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, зелёная",
+      "article": "AD-16DS-G-DC",
+      "ref": "2VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "12",
+      "type": "lamp",
+      "x": 308.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, красная",
+      "article": "AD-16DS-R-DC",
+      "ref": "2VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "13",
+      "type": "switch",
+      "x": 223.75,
+      "y": 173.75,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель Schneider XB5AD33, 3 полож. с фиксацией",
+      "article": "XB5AD33",
+      "ref": "2SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "14",
+      "type": "switch",
+      "x": 287.75,
+      "y": 173.75,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель Schneider XB5AD53, 3 полож. возвратный",
+      "article": "XB5AD53",
+      "ref": "2SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "15",
+      "type": "indicator",
+      "x": 402,
+      "y": 44,
+      "w": 96,
+      "h": 48,
+      "name": "ОВЕН ТРМ1-Щ2.У.И",
+      "article": "ТРМ1-Щ2.У.И",
+      "ref": "3HG1",
+      "cutout": {
+        "w": 92,
+        "h": 45
+      }
+    },
+    {
+      "id": "16",
+      "type": "lamp",
+      "x": 392.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, красная",
+      "article": "AD-16DS-R-DC",
+      "ref": "3VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "17",
+      "type": "lamp",
+      "x": 424.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, зелёная",
+      "article": "AD-16DS-G-DC",
+      "ref": "3VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "18",
+      "type": "lamp",
+      "x": 456.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, зелёная",
+      "article": "AD-16DS-G-DC",
+      "ref": "3VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "19",
+      "type": "lamp",
+      "x": 488.25,
+      "y": 122.25,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK AD-16DS Ø16, 24 В, красная",
+      "article": "AD-16DS-R-DC",
+      "ref": "3VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "20",
+      "type": "switch",
+      "x": 403.75,
+      "y": 173.75,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель Schneider XB5AD33, 3 полож. с фиксацией",
+      "article": "XB5AD33",
+      "ref": "3SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "21",
+      "type": "switch",
+      "x": 467.75,
+      "y": 173.75,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель Schneider XB5AD53, 3 полож. возвратный",
+      "article": "XB5AD53",
+      "ref": "3SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    }
+  ],
+  "labels": [
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 2,
+      "h": 18,
+      "maxChars": [
+        40,
+        40
+      ],
+      "default": [
+        "Положение задвижки",
+        "Объект 1"
+      ],
+      "id": "T1",
+      "x": 34,
+      "y": 16,
+      "w": 112
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A11",
+      "x": 26,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыть"
+      ],
+      "id": "A12",
+      "x": 58,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыть"
+      ],
+      "id": "A13",
+      "x": 90,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A14",
+      "x": 122,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        7
+      ],
+      "default": [
+        "Мест."
+      ],
+      "id": "B11",
+      "x": 26,
+      "y": 156,
+      "w": 21.333333333333332
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        7
+      ],
+      "default": [
+        "Откл."
+      ],
+      "id": "B12",
+      "x": 47.33333333333333,
+      "y": 156,
+      "w": 21.333333333333332
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        7
+      ],
+      "default": [
+        "Авт."
+      ],
+      "id": "B13",
+      "x": 68.66666666666666,
+      "y": 156,
+      "w": 21.333333333333332
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыть"
+      ],
+      "id": "C11",
+      "x": 89.99999999999999,
+      "y": 156,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыть"
+      ],
+      "id": "C12",
+      "x": 121.99999999999999,
+      "y": 156,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 2,
+      "h": 18,
+      "maxChars": [
+        40,
+        40
+      ],
+      "default": [
+        "Положение задвижки",
+        "Объект 2"
+      ],
+      "id": "T2",
+      "x": 214,
+      "y": 16,
+      "w": 112
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A21",
+      "x": 206,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыть"
+      ],
+      "id": "A22",
+      "x": 238,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыть"
+      ],
+      "id": "A23",
+      "x": 270,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A24",
+      "x": 302,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        7
+      ],
+      "default": [
+        "Мест."
+      ],
+      "id": "B21",
+      "x": 206,
+      "y": 156,
+      "w": 21.333333333333332
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        7
+      ],
+      "default": [
+        "Откл."
+      ],
+      "id": "B22",
+      "x": 227.33333333333334,
+      "y": 156,
+      "w": 21.333333333333332
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        7
+      ],
+      "default": [
+        "Авт."
+      ],
+      "id": "B23",
+      "x": 248.66666666666669,
+      "y": 156,
+      "w": 21.333333333333332
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыть"
+      ],
+      "id": "C21",
+      "x": 270,
+      "y": 156,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыть"
+      ],
+      "id": "C22",
+      "x": 302,
+      "y": 156,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 2,
+      "h": 18,
+      "maxChars": [
+        40,
+        40
+      ],
+      "default": [
+        "Положение задвижки",
+        "Объект 3"
+      ],
+      "id": "T3",
+      "x": 394,
+      "y": 16,
+      "w": 112
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A31",
+      "x": 386,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыть"
+      ],
+      "id": "A32",
+      "x": 418,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыть"
+      ],
+      "id": "A33",
+      "x": 450,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A34",
+      "x": 482,
+      "y": 104,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        7
+      ],
+      "default": [
+        "Мест."
+      ],
+      "id": "B31",
+      "x": 386,
+      "y": 156,
+      "w": 21.333333333333332
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        7
+      ],
+      "default": [
+        "Откл."
+      ],
+      "id": "B32",
+      "x": 407.3333333333333,
+      "y": 156,
+      "w": 21.333333333333332
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        7
+      ],
+      "default": [
+        "Авт."
+      ],
+      "id": "B33",
+      "x": 428.66666666666663,
+      "y": 156,
+      "w": 21.333333333333332
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыть"
+      ],
+      "id": "C31",
+      "x": 449.99999999999994,
+      "y": 156,
+      "w": 32
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыть"
+      ],
+      "id": "C32",
+      "x": 481.99999999999994,
+      "y": 156,
+      "w": 32
+    }
+  ],
+  "channels": [
+    {
+      "id": "ЗД1",
+      "kind": "задвижка",
+      "device": "Электропривод регулирующей арматуры",
+      "object": 1,
+      "facade": true,
+      "signals": {
+        "AI": 1,
+        "DI": 4,
+        "DO": 2
+      },
+      "terminal": "XT5",
+      "plc": "AI1, DI1, DO1",
+      "purpose": "Регулирующая задвижка, объект 1"
+    },
+    {
+      "id": "ЗД2",
+      "kind": "задвижка",
+      "device": "Электропривод регулирующей арматуры",
+      "object": 2,
+      "facade": true,
+      "signals": {
+        "AI": 1,
+        "DI": 4,
+        "DO": 2
+      },
+      "terminal": "XT5",
+      "plc": "AI1, DI1, DO1",
+      "purpose": "Регулирующая задвижка, объект 2"
+    },
+    {
+      "id": "ЗД3",
+      "kind": "задвижка",
+      "device": "Электропривод регулирующей арматуры",
+      "object": 3,
+      "facade": true,
+      "signals": {
+        "AI": 1,
+        "DI": 4,
+        "DO": 2
+      },
+      "terminal": "XT5",
+      "plc": "AI1, DI1, DO1",
+      "purpose": "Регулирующая задвижка, объект 3"
+    }
+  ]
+}

@@ -1,0 +1,2571 @@
+{
+  "code": "15",
+  "name": "Электрозадвижки, 8 шт. (без положения)",
+  "article": "НТ50.80.1",
+  "slotHeight": 250,
+  "allowedSlots": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "price": null,
+  "devices": [
+    {
+      "id": "1",
+      "type": "lamp",
+      "x": 35.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, красная",
+      "article": "BLS10-ADDS-024-K04-16",
+      "ref": "1VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "2",
+      "type": "lamp",
+      "x": 65.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, зелёная",
+      "article": "BLS10-ADDS-024-K06-16",
+      "ref": "1VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "3",
+      "type": "lamp",
+      "x": 35.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "yellow",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, жёлтая",
+      "article": "BLS10-ADDS-024-K05-16",
+      "ref": "1VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "4",
+      "type": "lamp",
+      "x": 65.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "white",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, белая",
+      "article": "BLS10-ADDS-024-K01-16",
+      "ref": "1VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "5",
+      "type": "switch",
+      "x": 45.75,
+      "y": 125.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3F, 3 полож. с фиксацией",
+      "article": "XB4BD3F",
+      "ref": "1SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "6",
+      "type": "switch",
+      "x": 45.75,
+      "y": 180.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3, 3 полож. возвратный без фиксации",
+      "article": "XB4BD3",
+      "ref": "1SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "7",
+      "type": "lamp",
+      "x": 95.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, красная",
+      "article": "BLS10-ADDS-024-K04-16",
+      "ref": "2VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "8",
+      "type": "lamp",
+      "x": 125.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, зелёная",
+      "article": "BLS10-ADDS-024-K06-16",
+      "ref": "2VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "9",
+      "type": "lamp",
+      "x": 95.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "yellow",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, жёлтая",
+      "article": "BLS10-ADDS-024-K05-16",
+      "ref": "2VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "10",
+      "type": "lamp",
+      "x": 125.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "white",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, белая",
+      "article": "BLS10-ADDS-024-K01-16",
+      "ref": "2VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "11",
+      "type": "switch",
+      "x": 105.75,
+      "y": 125.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3F, 3 полож. с фиксацией",
+      "article": "XB4BD3F",
+      "ref": "2SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "12",
+      "type": "switch",
+      "x": 105.75,
+      "y": 180.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3, 3 полож. возвратный без фиксации",
+      "article": "XB4BD3",
+      "ref": "2SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "13",
+      "type": "lamp",
+      "x": 155.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, красная",
+      "article": "BLS10-ADDS-024-K04-16",
+      "ref": "3VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "14",
+      "type": "lamp",
+      "x": 185.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, зелёная",
+      "article": "BLS10-ADDS-024-K06-16",
+      "ref": "3VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "15",
+      "type": "lamp",
+      "x": 155.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "yellow",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, жёлтая",
+      "article": "BLS10-ADDS-024-K05-16",
+      "ref": "3VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "16",
+      "type": "lamp",
+      "x": 185.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "white",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, белая",
+      "article": "BLS10-ADDS-024-K01-16",
+      "ref": "3VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "17",
+      "type": "switch",
+      "x": 165.75,
+      "y": 125.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3F, 3 полож. с фиксацией",
+      "article": "XB4BD3F",
+      "ref": "3SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "18",
+      "type": "switch",
+      "x": 165.75,
+      "y": 180.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3, 3 полож. возвратный без фиксации",
+      "article": "XB4BD3",
+      "ref": "3SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "19",
+      "type": "lamp",
+      "x": 215.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, красная",
+      "article": "BLS10-ADDS-024-K04-16",
+      "ref": "4VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "20",
+      "type": "lamp",
+      "x": 245.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, зелёная",
+      "article": "BLS10-ADDS-024-K06-16",
+      "ref": "4VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "21",
+      "type": "lamp",
+      "x": 215.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "yellow",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, жёлтая",
+      "article": "BLS10-ADDS-024-K05-16",
+      "ref": "4VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "22",
+      "type": "lamp",
+      "x": 245.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "white",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, белая",
+      "article": "BLS10-ADDS-024-K01-16",
+      "ref": "4VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "23",
+      "type": "switch",
+      "x": 225.75,
+      "y": 125.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3F, 3 полож. с фиксацией",
+      "article": "XB4BD3F",
+      "ref": "4SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "24",
+      "type": "switch",
+      "x": 225.75,
+      "y": 180.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3, 3 полож. возвратный без фиксации",
+      "article": "XB4BD3",
+      "ref": "4SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "25",
+      "type": "lamp",
+      "x": 275.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, красная",
+      "article": "BLS10-ADDS-024-K04-16",
+      "ref": "5VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "26",
+      "type": "lamp",
+      "x": 305.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, зелёная",
+      "article": "BLS10-ADDS-024-K06-16",
+      "ref": "5VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "27",
+      "type": "lamp",
+      "x": 275.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "yellow",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, жёлтая",
+      "article": "BLS10-ADDS-024-K05-16",
+      "ref": "5VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "28",
+      "type": "lamp",
+      "x": 305.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "white",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, белая",
+      "article": "BLS10-ADDS-024-K01-16",
+      "ref": "5VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "29",
+      "type": "switch",
+      "x": 285.75,
+      "y": 125.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3F, 3 полож. с фиксацией",
+      "article": "XB4BD3F",
+      "ref": "5SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "30",
+      "type": "switch",
+      "x": 285.75,
+      "y": 180.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3, 3 полож. возвратный без фиксации",
+      "article": "XB4BD3",
+      "ref": "5SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "31",
+      "type": "lamp",
+      "x": 335.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, красная",
+      "article": "BLS10-ADDS-024-K04-16",
+      "ref": "6VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "32",
+      "type": "lamp",
+      "x": 365.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, зелёная",
+      "article": "BLS10-ADDS-024-K06-16",
+      "ref": "6VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "33",
+      "type": "lamp",
+      "x": 335.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "yellow",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, жёлтая",
+      "article": "BLS10-ADDS-024-K05-16",
+      "ref": "6VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "34",
+      "type": "lamp",
+      "x": 365.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "white",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, белая",
+      "article": "BLS10-ADDS-024-K01-16",
+      "ref": "6VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "35",
+      "type": "switch",
+      "x": 345.75,
+      "y": 125.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3F, 3 полож. с фиксацией",
+      "article": "XB4BD3F",
+      "ref": "6SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "36",
+      "type": "switch",
+      "x": 345.75,
+      "y": 180.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3, 3 полож. возвратный без фиксации",
+      "article": "XB4BD3",
+      "ref": "6SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "37",
+      "type": "lamp",
+      "x": 395.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, красная",
+      "article": "BLS10-ADDS-024-K04-16",
+      "ref": "7VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "38",
+      "type": "lamp",
+      "x": 425.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, зелёная",
+      "article": "BLS10-ADDS-024-K06-16",
+      "ref": "7VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "39",
+      "type": "lamp",
+      "x": 395.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "yellow",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, жёлтая",
+      "article": "BLS10-ADDS-024-K05-16",
+      "ref": "7VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "40",
+      "type": "lamp",
+      "x": 425.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "white",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, белая",
+      "article": "BLS10-ADDS-024-K01-16",
+      "ref": "7VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "41",
+      "type": "switch",
+      "x": 405.75,
+      "y": 125.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3F, 3 полож. с фиксацией",
+      "article": "XB4BD3F",
+      "ref": "7SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "42",
+      "type": "switch",
+      "x": 405.75,
+      "y": 180.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3, 3 полож. возвратный без фиксации",
+      "article": "XB4BD3",
+      "ref": "7SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "43",
+      "type": "lamp",
+      "x": 455.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "red",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, красная",
+      "article": "BLS10-ADDS-024-K04-16",
+      "ref": "8VD1",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "44",
+      "type": "lamp",
+      "x": 485.25,
+      "y": 44.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "green",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, зелёная",
+      "article": "BLS10-ADDS-024-K06-16",
+      "ref": "8VD2",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "45",
+      "type": "lamp",
+      "x": 455.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "yellow",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, жёлтая",
+      "article": "BLS10-ADDS-024-K05-16",
+      "ref": "8VD3",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "46",
+      "type": "lamp",
+      "x": 485.25,
+      "y": 79.75,
+      "w": 19.5,
+      "h": 19.5,
+      "color": "white",
+      "name": "Лампа сигнальная IEK ADDS Ø16, 24 В, белая",
+      "article": "BLS10-ADDS-024-K01-16",
+      "ref": "8VD4",
+      "cutout": {
+        "d": 16
+      }
+    },
+    {
+      "id": "47",
+      "type": "switch",
+      "x": 465.75,
+      "y": 125.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3F, 3 полож. с фиксацией",
+      "article": "XB4BD3F",
+      "ref": "8SA1",
+      "cutout": {
+        "d": 22.5
+      }
+    },
+    {
+      "id": "48",
+      "type": "switch",
+      "x": 465.75,
+      "y": 180.25,
+      "w": 28.5,
+      "h": 28.5,
+      "name": "Переключатель EKF XB4BD3, 3 полож. возвратный без фиксации",
+      "article": "XB4BD3",
+      "ref": "8SA2",
+      "cutout": {
+        "d": 22.5
+      }
+    }
+  ],
+  "labels": [
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Назначение"
+      ],
+      "id": "T1",
+      "x": 30,
+      "y": 9.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Объект"
+      ],
+      "id": "O1",
+      "x": 30,
+      "y": 19.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A11",
+      "x": 30,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A12",
+      "x": 60,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Готов"
+      ],
+      "id": "B11",
+      "x": 30,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Отк/зак"
+      ],
+      "id": "B12",
+      "x": 60,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Мест"
+      ],
+      "id": "C11",
+      "x": 30,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "C12",
+      "x": 50,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Авто"
+      ],
+      "id": "C13",
+      "x": 70,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Закр"
+      ],
+      "id": "D11",
+      "x": 30,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "D12",
+      "x": 50,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откр"
+      ],
+      "id": "D13",
+      "x": 70,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Назначение"
+      ],
+      "id": "T2",
+      "x": 90,
+      "y": 9.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Объект"
+      ],
+      "id": "O2",
+      "x": 90,
+      "y": 19.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A21",
+      "x": 90,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A22",
+      "x": 120,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Готов"
+      ],
+      "id": "B21",
+      "x": 90,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Отк/зак"
+      ],
+      "id": "B22",
+      "x": 120,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Мест"
+      ],
+      "id": "C21",
+      "x": 90,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "C22",
+      "x": 110,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Авто"
+      ],
+      "id": "C23",
+      "x": 130,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Закр"
+      ],
+      "id": "D21",
+      "x": 90,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "D22",
+      "x": 110,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откр"
+      ],
+      "id": "D23",
+      "x": 130,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Назначение"
+      ],
+      "id": "T3",
+      "x": 150,
+      "y": 9.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Объект"
+      ],
+      "id": "O3",
+      "x": 150,
+      "y": 19.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A31",
+      "x": 150,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A32",
+      "x": 180,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Готов"
+      ],
+      "id": "B31",
+      "x": 150,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Отк/зак"
+      ],
+      "id": "B32",
+      "x": 180,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Мест"
+      ],
+      "id": "C31",
+      "x": 150,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "C32",
+      "x": 170,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Авто"
+      ],
+      "id": "C33",
+      "x": 190,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Закр"
+      ],
+      "id": "D31",
+      "x": 150,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "D32",
+      "x": 170,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откр"
+      ],
+      "id": "D33",
+      "x": 190,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Назначение"
+      ],
+      "id": "T4",
+      "x": 210,
+      "y": 9.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Объект"
+      ],
+      "id": "O4",
+      "x": 210,
+      "y": 19.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A41",
+      "x": 210,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A42",
+      "x": 240,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Готов"
+      ],
+      "id": "B41",
+      "x": 210,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Отк/зак"
+      ],
+      "id": "B42",
+      "x": 240,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Мест"
+      ],
+      "id": "C41",
+      "x": 210,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "C42",
+      "x": 230,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Авто"
+      ],
+      "id": "C43",
+      "x": 250,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Закр"
+      ],
+      "id": "D41",
+      "x": 210,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "D42",
+      "x": 230,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откр"
+      ],
+      "id": "D43",
+      "x": 250,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Назначение"
+      ],
+      "id": "T5",
+      "x": 270,
+      "y": 9.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Объект"
+      ],
+      "id": "O5",
+      "x": 270,
+      "y": 19.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A51",
+      "x": 270,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A52",
+      "x": 300,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Готов"
+      ],
+      "id": "B51",
+      "x": 270,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Отк/зак"
+      ],
+      "id": "B52",
+      "x": 300,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Мест"
+      ],
+      "id": "C51",
+      "x": 270,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "C52",
+      "x": 290,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Авто"
+      ],
+      "id": "C53",
+      "x": 310,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Закр"
+      ],
+      "id": "D51",
+      "x": 270,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "D52",
+      "x": 290,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откр"
+      ],
+      "id": "D53",
+      "x": 310,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Назначение"
+      ],
+      "id": "T6",
+      "x": 330,
+      "y": 9.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Объект"
+      ],
+      "id": "O6",
+      "x": 330,
+      "y": 19.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A61",
+      "x": 330,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A62",
+      "x": 360,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Готов"
+      ],
+      "id": "B61",
+      "x": 330,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Отк/зак"
+      ],
+      "id": "B62",
+      "x": 360,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Мест"
+      ],
+      "id": "C61",
+      "x": 330,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "C62",
+      "x": 350,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Авто"
+      ],
+      "id": "C63",
+      "x": 370,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Закр"
+      ],
+      "id": "D61",
+      "x": 330,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "D62",
+      "x": 350,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откр"
+      ],
+      "id": "D63",
+      "x": 370,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Назначение"
+      ],
+      "id": "T7",
+      "x": 390,
+      "y": 9.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Объект"
+      ],
+      "id": "O7",
+      "x": 390,
+      "y": 19.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A71",
+      "x": 390,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A72",
+      "x": 420,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Готов"
+      ],
+      "id": "B71",
+      "x": 390,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Отк/зак"
+      ],
+      "id": "B72",
+      "x": 420,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Мест"
+      ],
+      "id": "C71",
+      "x": 390,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "C72",
+      "x": 410,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Авто"
+      ],
+      "id": "C73",
+      "x": 430,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Закр"
+      ],
+      "id": "D71",
+      "x": 390,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "D72",
+      "x": 410,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откр"
+      ],
+      "id": "D73",
+      "x": 430,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Назначение"
+      ],
+      "id": "T8",
+      "x": 450,
+      "y": 9.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 1,
+      "h": 10,
+      "maxChars": [
+        21
+      ],
+      "default": [
+        "Объект"
+      ],
+      "id": "O8",
+      "x": 450,
+      "y": 19.3,
+      "w": 60
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Закрыто"
+      ],
+      "id": "A81",
+      "x": 450,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Открыто"
+      ],
+      "id": "A82",
+      "x": 480,
+      "y": 31.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Готов"
+      ],
+      "id": "B81",
+      "x": 450,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        10
+      ],
+      "default": [
+        "Отк/зак"
+      ],
+      "id": "B82",
+      "x": 480,
+      "y": 66.7,
+      "w": 30
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Мест"
+      ],
+      "id": "C81",
+      "x": 450,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "C82",
+      "x": 470,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Авто"
+      ],
+      "id": "C83",
+      "x": 490,
+      "y": 112.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Закр"
+      ],
+      "id": "D81",
+      "x": 450,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откл"
+      ],
+      "id": "D82",
+      "x": 470,
+      "y": 167.2,
+      "w": 20
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": false,
+      "lines": 1,
+      "h": 12,
+      "maxChars": [
+        6
+      ],
+      "default": [
+        "Откр"
+      ],
+      "id": "D83",
+      "x": 490,
+      "y": 167.2,
+      "w": 20
+    }
+  ],
+  "channels": [
+    {
+      "id": "ЗД1",
+      "kind": "задвижка",
+      "device": "Кран шаровой с электроприводом HQ-010-IIBT4",
+      "object": 1,
+      "facade": true,
+      "signals": {
+        "DI": 4,
+        "DO": 2
+      },
+      "ex": "Exd",
+      "terminal": "1XT1, 1XT2",
+      "plc": "DI1:DI0…DI3, DO1:DO0…DO1",
+      "purpose": "Запорная задвижка, объект 1"
+    },
+    {
+      "id": "ЗД2",
+      "kind": "задвижка",
+      "device": "Кран шаровой с электроприводом HQ-010-IIBT4",
+      "object": 2,
+      "facade": true,
+      "signals": {
+        "DI": 4,
+        "DO": 2
+      },
+      "ex": "Exd",
+      "terminal": "2XT1, 2XT2",
+      "plc": "DI1:DI4…DI7, DO1:DO2…DO3",
+      "purpose": "Запорная задвижка, объект 2"
+    },
+    {
+      "id": "ЗД3",
+      "kind": "задвижка",
+      "device": "Кран шаровой с электроприводом HQ-010-IIBT4",
+      "object": 3,
+      "facade": true,
+      "signals": {
+        "DI": 4,
+        "DO": 2
+      },
+      "ex": "Exd",
+      "terminal": "3XT1, 3XT2",
+      "plc": "DI1:DI8…DI11, DO1:DO4…DO5",
+      "purpose": "Запорная задвижка, объект 3"
+    },
+    {
+      "id": "ЗД4",
+      "kind": "задвижка",
+      "device": "Кран шаровой с электроприводом HQ-010-IIBT4",
+      "object": 4,
+      "facade": true,
+      "signals": {
+        "DI": 4,
+        "DO": 2
+      },
+      "ex": "Exd",
+      "terminal": "4XT1, 4XT2",
+      "plc": "DI1:DI12…DI15, DO1:DO6…DO7",
+      "purpose": "Запорная задвижка, объект 4"
+    },
+    {
+      "id": "ЗД5",
+      "kind": "задвижка",
+      "device": "Кран шаровой с электроприводом HQ-010-IIBT4",
+      "object": 5,
+      "facade": true,
+      "signals": {
+        "DI": 4,
+        "DO": 2
+      },
+      "ex": "Exd",
+      "terminal": "5XT1, 5XT2",
+      "plc": "DI2:DI0…DI3, DO2:DO0…DO1",
+      "purpose": "Запорная задвижка, объект 5"
+    },
+    {
+      "id": "ЗД6",
+      "kind": "задвижка",
+      "device": "Кран шаровой с электроприводом HQ-010-IIBT4",
+      "object": 6,
+      "facade": true,
+      "signals": {
+        "DI": 4,
+        "DO": 2
+      },
+      "ex": "Exd",
+      "terminal": "6XT1, 6XT2",
+      "plc": "DI2:DI4…DI7, DO2:DO2…DO3",
+      "purpose": "Запорная задвижка, объект 6"
+    },
+    {
+      "id": "ЗД7",
+      "kind": "задвижка",
+      "device": "Кран шаровой с электроприводом HQ-010-IIBT4",
+      "object": 7,
+      "facade": true,
+      "signals": {
+        "DI": 4,
+        "DO": 2
+      },
+      "ex": "Exd",
+      "terminal": "7XT1, 7XT2",
+      "plc": "DI2:DI8…DI11, DO2:DO4…DO5",
+      "purpose": "Запорная задвижка, объект 7"
+    },
+    {
+      "id": "ЗД8",
+      "kind": "задвижка",
+      "device": "Кран шаровой с электроприводом HQ-010-IIBT4",
+      "object": 8,
+      "facade": true,
+      "signals": {
+        "DI": 4,
+        "DO": 2
+      },
+      "ex": "Exd",
+      "terminal": "8XT1, 8XT2",
+      "plc": "DI2:DI12…DI15, DO2:DO6…DO7",
+      "purpose": "Запорная задвижка, объект 8"
+    }
+  ]
+}

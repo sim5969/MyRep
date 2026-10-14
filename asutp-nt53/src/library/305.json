@@ -1,0 +1,237 @@
+{
+  "code": "305",
+  "name": "Уровнемеры ГАММА-8М, 3 шт.",
+  "slotHeight": 250,
+  "allowedSlots": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "price": null,
+  "devices": [
+    {
+      "id": "1",
+      "type": "device",
+      "x": 56.5,
+      "y": 54,
+      "w": 124,
+      "h": 142,
+      "name": "Уровнемер ГАММА-8М (Альбатрос)",
+      "article": "ГАММА-8М",
+      "ref": "LV1",
+      "displays": 2,
+      "displayColor": "#7fd4ea"
+    },
+    {
+      "id": "2",
+      "type": "device",
+      "x": 208,
+      "y": 54,
+      "w": 124,
+      "h": 142,
+      "name": "Уровнемер ГАММА-8М (Альбатрос)",
+      "article": "ГАММА-8М",
+      "ref": "LV2",
+      "displays": 2,
+      "displayColor": "#7fd4ea"
+    },
+    {
+      "id": "3",
+      "type": "device",
+      "x": 359.5,
+      "y": 54,
+      "w": 124,
+      "h": 142,
+      "name": "Уровнемер ГАММА-8М (Альбатрос)",
+      "article": "ГАММА-8М",
+      "ref": "LV3",
+      "displays": 2,
+      "displayColor": "#7fd4ea"
+    }
+  ],
+  "labels": [
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 2,
+      "h": 18,
+      "maxChars": [
+        44,
+        44
+      ],
+      "default": [
+        "Уровень взлива",
+        "Ёмкость Е-0 V=100м³"
+      ],
+      "id": "U1",
+      "x": 56.5,
+      "y": 32,
+      "w": 124
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 2,
+      "h": 18,
+      "maxChars": [
+        44,
+        44
+      ],
+      "default": [
+        "Уровень взлива",
+        "Ёмкость Е-0 V=100м³"
+      ],
+      "id": "D1",
+      "x": 56.5,
+      "y": 200,
+      "w": 124
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 2,
+      "h": 18,
+      "maxChars": [
+        44,
+        44
+      ],
+      "default": [
+        "Уровень взлива",
+        "Ёмкость Е-0 V=100м³"
+      ],
+      "id": "U2",
+      "x": 208,
+      "y": 32,
+      "w": 124
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 2,
+      "h": 18,
+      "maxChars": [
+        44,
+        44
+      ],
+      "default": [
+        "Уровень взлива",
+        "Ёмкость Е-0 V=100м³"
+      ],
+      "id": "D2",
+      "x": 208,
+      "y": 200,
+      "w": 124
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 2,
+      "h": 18,
+      "maxChars": [
+        44,
+        44
+      ],
+      "default": [
+        "Уровень взлива",
+        "Ёмкость Е-0 V=100м³"
+      ],
+      "id": "U3",
+      "x": 359.5,
+      "y": 32,
+      "w": 124
+    },
+    {
+      "box": true,
+      "align": "center",
+      "fontSize": 5,
+      "editable": true,
+      "lines": 2,
+      "h": 18,
+      "maxChars": [
+        44,
+        44
+      ],
+      "default": [
+        "Уровень взлива",
+        "Ёмкость Е-0 V=100м³"
+      ],
+      "id": "D3",
+      "x": 359.5,
+      "y": 200,
+      "w": 124
+    }
+  ],
+  "channels": [
+    {
+      "id": "У1",
+      "kind": "датчик",
+      "device": "Датчик уровня, жгут DB-15M",
+      "object": 1,
+      "facade": true,
+      "terminal": "XP1 (LV1), канал 1",
+      "plc": "через LV1: RS-485",
+      "purpose": "Точка уровня 1, прибор LV1 канал 1"
+    },
+    {
+      "id": "У2",
+      "kind": "датчик",
+      "device": "Датчик уровня, жгут DB-15M",
+      "object": 2,
+      "facade": true,
+      "terminal": "XP1 (LV1), канал 2",
+      "plc": "через LV1: RS-485",
+      "purpose": "Точка уровня 2, прибор LV1 канал 2"
+    },
+    {
+      "id": "У3",
+      "kind": "датчик",
+      "device": "Датчик уровня, жгут DB-15M",
+      "object": 3,
+      "facade": true,
+      "terminal": "XP4 (LV2), канал 1",
+      "plc": "через LV2: RS-485",
+      "purpose": "Точка уровня 3, прибор LV2 канал 1"
+    },
+    {
+      "id": "У4",
+      "kind": "датчик",
+      "device": "Датчик уровня, жгут DB-15M",
+      "object": 4,
+      "facade": true,
+      "terminal": "XP4 (LV2), канал 2",
+      "plc": "через LV2: RS-485",
+      "purpose": "Точка уровня 4, прибор LV2 канал 2"
+    },
+    {
+      "id": "У5",
+      "kind": "датчик",
+      "device": "Датчик уровня, жгут DB-15M",
+      "object": 5,
+      "facade": true,
+      "terminal": "XP7 (LV3), канал 1",
+      "plc": "через LV3: RS-485",
+      "purpose": "Точка уровня 5, прибор LV3 канал 1"
+    },
+    {
+      "id": "У6",
+      "kind": "датчик",
+      "device": "Датчик уровня, жгут DB-15M",
+      "object": 6,
+      "facade": true,
+      "terminal": "XP7 (LV3), канал 2",
+      "plc": "через LV3: RS-485",
+      "purpose": "Точка уровня 6, прибор LV3 канал 2"
+    }
+  ]
+}

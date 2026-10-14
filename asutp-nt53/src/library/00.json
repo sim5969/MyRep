@@ -1,0 +1,14 @@
+{
+  "code": "00",
+  "name": "Глухая панель",
+  "slotHeight": 250,
+  "allowedSlots": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "price": null,
+  "devices": [],
+  "labels": []
+}

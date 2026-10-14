@@ -1,0 +1,32 @@
+# Нормализация переносов строк: в репозитории хранить LF, конвертацию не делать «на лету».
+* text=auto
+
+# Явно текстовые (код и документация)
+*.ts   text
+*.tsx  text
+*.mjs  text
+*.js   text
+*.json text
+*.css  text
+*.html text
+*.svg  text
+*.md   text
+*.txt  text
+*.xml  text
+*.py   text
+.gitignore     text
+.gitattributes text
+
+# Batch-файлы Windows — всегда CRLF в рабочей копии
+*.bat  text eol=crlf
+
+# Бинарные — без преобразований
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.ttf  binary
+*.pdf  binary
+*.docx binary
+*.xlsx binary
+*.dxf  binary
+*.zip  binary
